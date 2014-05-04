@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* CSS Document c01d2e */
+
+body {font: 13px/18px "Trebuchet MS";color:#635b67;margin:0px;padding:0px;background:#c5e341;}
+img {margin:0px;padding:0px;border:0px;}
+hr {height:1px;margin:0px;padding:0px;margin-bottom:4px;border:none;color:#635b67;border-bottom:solid 1px #635b67;}
+p {font: 11px/14px "Trebuchet MS";margin:0px;padding:0px;}
+h1 {font:bold 18px/16px "Trebuchet MS";margin:0px;padding:0px;}
+h2 {font:bold 14px/16px "Trebuchet MS";margin:0px;padding:0px;}
+h2.news {font:bold 17px/18px "Trebuchet MS";margin:0px;padding:0px;color:#c01d2e;}
+h2.date {font:bold 16px/19px "Trebuchet MS";margin:0px;padding:0px;}
+h2.parking {font:bold 15px/19px "Trebuchet MS";margin:0px;padding:0px;}
+h3 {font:bold 12px/14px "Trebuchet MS";margin:0px;padding:0px;}
+.quote {font:bold 14px/16px "Trebuchet MS";margin:0px;padding:0px;}
+.red {color:#FFFFFF;padding:3px 6px 3px 6px;background-color:#c01d2e;}
+.holiday {color:#ff391c;}
+a {color:#c01d2e;}
+a:hover {color:#c01d2e;text-decoration:none;}
+.container {width:970px;height:auto;display:table;text-align:left;} 
+.header {width:970px;height:214px;background:White;}
+.header_int {width:970px;height:170px;background:White;}
+.header_int .logo {float:left;margin:23px 0px 0px 67px;}
+.logo {float:left;margin:25px 0px 0px 62px;}
+.promo {text-align:center;background:#000;padding:20px 0px 20px 0px;margin-top:5px;}
+.navigation {width:970px;height:40px;background:#635b67;text-align:left;margin:0px;padding:0px;border-top:solid 3px #d0e87f;}
+.main {width:970px;display:table;border-bottom:solid 10px #635b67;background:#f2efe8 url(../images/misc/dashed.gif) top left;}
+.main .padding {padding:40px 30px 45px 30px;}
+.footer {width:970px;font:10px/11px "Trebuchet MS";text-align:left;}
+.footer .padding {padding:3px 0px 0px 15px;}
+.clearfloat {clear:both;height:0;font-size:1px;line-height:0px;}
+.gallery img {padding:5px 10px 5px 0px;}
+
+
+
+.home .left {margin:0px;float:left;width:580px;padding:0px;text-align:left;display:table;height:auto;} 
+.home .left .padding {padding:40px 30px 45px 30px;}
+.home .left .callout {width:560px;font:12px/17px "Trebuchet MS";background:#FFFFFF/*  url(../images/header/quote.gif) no-repeat left top;*/}
+.home .left .inset {padding:0px 20px 6px 0px;}
+.home .left .text {padding:10px 25px 8px 25px;}
+.home .left .banner {font: 10px/12px "Trebuchet MS";padding:10px;}
+.home .left .info {font: 10px/12px "Trebuchet MS";}
+.home .left ul {margin:0px 0px 0px 12px;padding:3px 0px 0px 0px;font:13px/16px "Trebuchet MS";}
+.home .left ul li {padding:0px 0px 10px 0px;margin:0px;list-style-image: url(../images/misc/minus.gif);list-style-position:outside;}
+.home .right {float: right;width: 345px;padding:0px;text-align:left;display:table;height:auto;background: url(../images/misc/dots.gif) repeat-y left;} 
+.home .right .padding {padding:45px 25px 25px 25px;}
+.home .right .inset {padding:0px 15px 6px 0px;}
+.home .right .map {padding:0px 15px 6px 0px;float:left;}
+.home .right .hours {background-color:#ffffff;font:12px/19px "Trebuchet MS";border:solid 1px #cccccc;margin-top:10px;}
+.home .right .hours .padding {padding:15px;}
+.home .right ul {margin:0px 0px 0px 12px;padding:3px 0px 0px 0px;font:13px/16px "Trebuchet MS";width:280px;}
+.home .right ul li {padding:0px 0px 10px 0px;margin:0px;list-style-image: url(../images/misc/minus.gif);list-style-position:outside;}
+
+
+
+
+
+.int .left {margin: 0 285px 0 0;padding:0px;background: url(../images/misc/dots.gif) repeat-y right top;text-align:left;} 
+.int .left .callout {font-size:13px;}
+.int .left .padding {padding:40px 45px 45px 35px;}
+.int .left .inset {padding:0px 20px 5px 0px;}
+.int .left .insetmap {padding:0px 35px 6px 0px;}
+.int .left .text {background:White;width:435px;margin-left:3px;padding:10px 25px 8px 25px;}
+.int .left .info {margin:0px 0px 0px 10px;}
+.int .left ul {margin:0px;padding:8px 0px 0px 0px;font:13px/16px "Trebuchet MS";}
+.int .left ul.events {margin:0px;padding:3px 0px 0px 0px;font:13px/16px "Trebuchet MS";}
+.int .left ul li {padding:0px 0px 4px 0px;margin:0px 0px 0px 12px;list-style-image: url(../images/misc/minus.gif);list-style-position: outside;}
+.int .left .bulletLeft {float:left;width:275px;}
+.int .left .bulletRight {float:right;width:275px;}
+.int .right {float: right;width: 285px;padding:0px;text-align:left;} 
+.int .right .padding {padding:45px 25px 25px 25px;}
+.int .right .inset {padding:0px 15px 6px 0px;}
+.int .right .hours {background-color:#ffffff;font:12px/19px "Trebuchet MS";border:solid 1px #cccccc;margin-top:10px;}
+.int .right .hours .padding {padding:15px;}
+.int .right ul {margin:0px 0px 0px 20px;padding:3px 0px 0px 0px;font:13px/16px "Trebuchet MS";}
+.int .right ul li {padding:0px 0px 10px 0px;margin:0px;list-style-image: url(../images/misc/minus.gif);list-style-position:outside;}
+
+
+/* Edit for News Section */
+.mainframe {height:4000px;text-align:left;margin:0px;padding:0px;width:970px;background:#dccfbe url(../images/home/int_background.jpg) no-repeat top;}

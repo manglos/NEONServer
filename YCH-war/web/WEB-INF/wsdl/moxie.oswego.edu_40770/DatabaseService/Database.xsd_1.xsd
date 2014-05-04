@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://WS/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WS/">
+
+<xs:element name="addGame" type="tns:addGame"/>
+
+<xs:element name="addGameResponse" type="tns:addGameResponse"/>
+
+<xs:element name="addMeshToPlayer" type="tns:addMeshToPlayer"/>
+
+<xs:element name="addMeshToPlayerResponse" type="tns:addMeshToPlayerResponse"/>
+
+<xs:element name="addPlayer" type="tns:addPlayer"/>
+
+<xs:element name="addPlayerResponse" type="tns:addPlayerResponse"/>
+
+<xs:element name="checkPassword" type="tns:checkPassword"/>
+
+<xs:element name="checkPasswordResponse" type="tns:checkPasswordResponse"/>
+
+<xs:element name="getPlayerStringByUsername" type="tns:getPlayerStringByUsername"/>
+
+<xs:element name="getPlayerStringByUsernameResponse" type="tns:getPlayerStringByUsernameResponse"/>
+
+<xs:element name="getUsernames" type="tns:getUsernames"/>
+
+<xs:element name="getUsernamesResponse" type="tns:getUsernamesResponse"/>
+
+<xs:element name="sortBy" type="tns:sortBy"/>
+
+<xs:element name="sortByResponse" type="tns:sortByResponse"/>
+
+<xs:element name="unameIsAvailable" type="tns:unameIsAvailable"/>
+
+<xs:element name="unameIsAvailableResponse" type="tns:unameIsAvailableResponse"/>
+
+<xs:complexType name="addMeshToPlayer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+<xs:element name="arg2" type="xs:int"/>
+<xs:element name="arg3" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addMeshToPlayerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unameIsAvailable">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unameIsAvailableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGame">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:int"/>
+<xs:element name="arg3" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGameResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getUsernames">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getUsernamesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPlayer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+<xs:element name="arg4" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPlayerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="sortBy">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sortByResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="checkPassword">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPlayerStringByUsername">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPlayerStringByUsernameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

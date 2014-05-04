@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" ;="" charset="utf-8">
+
+        <title>CSC 480</title>
+
+        <link rel="stylesheet" type="text/css" href="Style/menus.css">
+		<link rel="stylesheet" href="Style/farbtastic/farbtastic.css" type="text/css" />
+		<script src="Style/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="Style/farbtastic/farbtastic.js"></script>
+		<script type="text/javascript">
+		  $(document).ready(function() {
+			$('#colorpicker').farbtastic('#color');
+		  });
+		</script>
+	<script>
+		function blink(){
+			x =1;
+			setInterval(change, 1000);
+		}
+		
+		function blink1(){
+			x =1;
+			setInterval(change, 1000);
+		}
+		
+		function change(){
+			if (x === 1) {
+				color = selectAll(document.getElementById('color').value);
+				x = 2;
+				} else {
+				color = "transparent";
+				x = 1;
+			}
+			selectAll(color);
+		}
+
+		function setPoint(x, y, color){
+			document.getElementById("("+x+","+ y +")").style.fill = color;
+		}
+	
+		function setColor(color){
+			document.getElementById("(1,1)").style.fill = color;
+			document.getElementById("(2,3)").style.fill = color;
+			document.getElementById("(6,2)").style.fill = color;
+			document.getElementById("(2,7)").style.fill = color;
+			document.getElementById("(7,6)").style.fill = color;
+			document.getElementById("(10,6)").style.fill = color;
+		}
+		
+		function getColumn(x, color){
+
+			for(var i=0;i<16;i++){
+				document.getElementById("("+x+","+(i+1)+")").style.fill = color;
+			}
+			/*document.getElementById("(1,1)").style.fill = color;
+			document.getElementById("(1,2)").style.fill = color;
+			document.getElementById("(1,3)").style.fill = color;
+			document.getElementById("(1,4)").style.fill = color;
+			document.getElementById("(1,5)").style.fill = color;
+			document.getElementById("(1,6)").style.fill = color;
+			document.getElementById("(1,7)").style.fill = color;
+			document.getElementById("(1,8)").style.fill = color;
+			document.getElementById("(1,9)").style.fill = color;
+			document.getElementById("(1,10)").style.fill = color;
+			document.getElementById("(1,11)").style.fill = color;
+			document.getElementById("(1,12)").style.fill = color;
+			document.getElementById("(1,13)").style.fill = color;
+			document.getElementById("(1,14)").style.fill = color;
+			document.getElementById("(1,15)").style.fill = color;
+			document.getElementById("(1,16)").style.fill = color;*/
+		}
+		
+		function selectAll(color){
+			for(var j=0;j<32;j++){
+				for(var i=0;i<16;i++){
+					document.getElementById("("+(j+1)+","+(i+1)+")").style.fill = color;
+				}
+			}
+		}
+
+    </script>
+</head>
+
+    <body>
+        <div id="wrap">
+            <div id="header"></div>
+            <div id="nav">
+                <ul>
+                    <li><a href="index.php"> Home </a></li>
+                    <li><a href="about.html"> About Me </a></li>
+                    <li><a href="education.html"> Education </a></li>
+                    <li><a href="cv.html"> CV </a></li>
+                    <li><a href="contact.html"> Contact </a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <h3>Main Content</h3>
+				<p>Sample mock-up graphic for the preview window, some might say its a bit 'Meshy'</p>
+			  <svg width="384" height="192" style="border:3px solid lightslategrey; color:sienna;margin-left:7%;">
+				<defs>
+				  <pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse">
+					<path d="M 0 0 L 0 12 384 12" fill="none" stroke="gray" stroke-width="0.5"/>
+				  </pattern>
+				</defs>
+				<rect width="384" height="192" fill="url(#grid)" />
+				
+				//column 1
+				<circle id= "(1,1)" cx="6" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,2)" cx="6" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,3)" cx="6" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,4)" cx="6" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,5)" cx="6" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,6)" cx="6" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,7)" cx="6" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,8)" cx="6" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,9)" cx="6" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,10)" cx="6" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,11)" cx="6" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,12)" cx="6" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,13)" cx="6" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,14)" cx="6" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,15)" cx="6" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(1,16)" cx="6" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 2
+				<circle id= "(2,1)" cx="18" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,2)" cx="18" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,3)" cx="18" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,4)" cx="18" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,5)" cx="18" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,6)" cx="18" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,7)" cx="18" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,8)" cx="18" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,9)" cx="18" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,10)" cx="18" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,11)" cx="18" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,12)" cx="18" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,13)" cx="18" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,14)" cx="18" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,15)" cx="18" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(2,16)" cx="18" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 3
+				<circle id= "(3,1)" cx="30" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,2)" cx="30" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,3)" cx="30" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,4)" cx="30" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,5)" cx="30" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,6)" cx="30" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,7)" cx="30" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,8)" cx="30" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,9)" cx="30" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,10)" cx="30" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,11)" cx="30" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,12)" cx="30" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,13)" cx="30" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,14)" cx="30" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,15)" cx="30" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(3,16)" cx="30" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 4
+				<circle id= "(4,1)" cx="42" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,2)" cx="42" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,3)" cx="42" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,4)" cx="42" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,5)" cx="42" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,6)" cx="42" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,7)" cx="42" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,8)" cx="42" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,9)" cx="42" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,10)" cx="42" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,11)" cx="42" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,12)" cx="42" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,13)" cx="42" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,14)" cx="42" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,15)" cx="42" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(4,16)" cx="42" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 5
+				<circle id= "(5,1)" cx="54" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,2)" cx="54" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,3)" cx="54" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,4)" cx="54" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,5)" cx="54" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,6)" cx="54" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,7)" cx="54" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,8)" cx="54" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,9)" cx="54" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,10)" cx="54" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,11)" cx="54" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,12)" cx="54" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,13)" cx="54" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,14)" cx="54" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,15)" cx="54" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(5,16)" cx="54" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 6
+				<circle id= "(6,1)" cx="66" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,2)" cx="66" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,3)" cx="66" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,4)" cx="66" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,5)" cx="66" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,6)" cx="66" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,7)" cx="66" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,8)" cx="66" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,9)" cx="66" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,10)" cx="66" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,11)" cx="66" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,12)" cx="66" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,13)" cx="66" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,14)" cx="66" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,15)" cx="66" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(6,16)" cx="66" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 7
+				<circle id= "(7,1)" cx="78" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,2)" cx="78" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,3)" cx="78" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,4)" cx="78" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,5)" cx="78" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,6)" cx="78" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,7)" cx="78" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,8)" cx="78" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,9)" cx="78" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,10)" cx="78" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,11)" cx="78" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,12)" cx="78" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,13)" cx="78" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,14)" cx="78" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,15)" cx="78" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(7,16)" cx="78" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 8
+				<circle id= "(8,1)" cx="90" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,2)" cx="90" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,3)" cx="90" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,4)" cx="90" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,5)" cx="90" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,6)" cx="90" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,7)" cx="90" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,8)" cx="90" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,9)" cx="90" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,10)" cx="90" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,11)" cx="90" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,12)" cx="90" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,13)" cx="90" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,14)" cx="90" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,15)" cx="90" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(8,16)" cx="90" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 9
+				<circle id= "(9,1)" cx="102" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,2)" cx="102" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,3)" cx="102" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,4)" cx="102" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,5)" cx="102" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,6)" cx="102" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,7)" cx="102" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,8)" cx="102" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,9)" cx="102" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,10)" cx="102" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,11)" cx="102" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,12)" cx="102" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,13)" cx="102" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,14)" cx="102" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,15)" cx="102" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(9,16)" cx="102" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 10
+				<circle id= "(10,1)" cx="114" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,2)" cx="114" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,3)" cx="114" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,4)" cx="114" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,5)" cx="114" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,6)" cx="114" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,7)" cx="114" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,8)" cx="114" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,9)" cx="114" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,10)" cx="114" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,11)" cx="114" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,12)" cx="114" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,13)" cx="114" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,14)" cx="114" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,15)" cx="114" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(10,16)" cx="114" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+			
+			//column 11
+				<circle id= "(11,1)" cx="126" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,2)" cx="126" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,3)" cx="126" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,4)" cx="126" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,5)" cx="126" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,6)" cx="126" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,7)" cx="126" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,8)" cx="126" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,9)" cx="126" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,10)" cx="126" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,11)" cx="126" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,12)" cx="126" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,13)" cx="126" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,14)" cx="126" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,15)" cx="126" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(11,16)" cx="126" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 12
+				<circle id= "(12,1)" cx="138" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,2)" cx="138" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,3)" cx="138" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,4)" cx="138" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,5)" cx="138" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,6)" cx="138" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,7)" cx="138" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,8)" cx="138" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,9)" cx="138" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,10)" cx="138" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,11)" cx="138" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,12)" cx="138" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,13)" cx="138" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,14)" cx="138" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,15)" cx="138" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(12,16)" cx="138" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 13
+				<circle id= "(13,1)" cx="150" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,2)" cx="150" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,3)" cx="150" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,4)" cx="150" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,5)" cx="150" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,6)" cx="150" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,7)" cx="150" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,8)" cx="150" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,9)" cx="150" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,10)" cx="150" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,11)" cx="150" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,12)" cx="150" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,13)" cx="150" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,14)" cx="150" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,15)" cx="150" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(13,16)" cx="150" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 14
+				<circle id= "(14,1)" cx="162" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,2)" cx="162" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,3)" cx="162" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,4)" cx="162" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,5)" cx="162" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,6)" cx="162" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,7)" cx="162" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,8)" cx="162" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,9)" cx="162" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,10)" cx="162" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,11)" cx="162" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,12)" cx="162" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,13)" cx="162" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,14)" cx="162" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,15)" cx="162" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(14,16)" cx="162" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 15
+				<circle id= "(15,1)" 	cx="174" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,2)" 	cx="174" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,3)" 	cx="174" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,4)" 	cx="174" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,5)" 	cx="174" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,6)" 	cx="174" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,7)" 	cx="174" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,8)" 	cx="174" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,9)" 	cx="174" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,10)" 	cx="174" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,11)" 	cx="174" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,12)" 	cx="174" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,13)" 	cx="174" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,14)" 	cx="174" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,15)" 	cx="174" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(15,16)" 	cx="174" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 16
+				<circle id= "(16,1)" 	cx="186" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,2)" 	cx="186" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,3)" 	cx="186" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,4)" 	cx="186" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,5)" 	cx="186" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,6)" 	cx="186" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,7)" 	cx="186" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,8)" 	cx="186" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,9)" 	cx="186" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,10)" 	cx="186" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,11)" 	cx="186" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,12)" 	cx="186" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,13)" 	cx="186" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,14)" 	cx="186" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,15)" 	cx="186" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(16,16)" 	cx="186" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 17
+				<circle id= "(17,1)" 	cx="198" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,2)" 	cx="198" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,3)" 	cx="198" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,4)" 	cx="198" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,5)" 	cx="198" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,6)" 	cx="198" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,7)" 	cx="198" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,8)" 	cx="198" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,9)" 	cx="198" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,10)" 	cx="198" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,11)" 	cx="198" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,12)" 	cx="198" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,13)" 	cx="198" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,14)" 	cx="198" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,15)" 	cx="198" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(17,16)" 	cx="198" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+			
+				//column 18
+				<circle id= "(18,1)" 	cx="210" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,2)" 	cx="210" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,3)" 	cx="210" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,4)" 	cx="210" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,5)" 	cx="210" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,6)" 	cx="210" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,7)" 	cx="210" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,8)" 	cx="210" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,9)" 	cx="210" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,10)" 	cx="210" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,11)" 	cx="210" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,12)" 	cx="210" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,13)" 	cx="210" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,14)" 	cx="210" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,15)" 	cx="210" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(18,16)" 	cx="210" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+							
+				//column 19
+				<circle id= "(19,1)" 	cx="222" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,2)" 	cx="222" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,3)" 	cx="222" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,4)" 	cx="222" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,5)" 	cx="222" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,6)" 	cx="222" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,7)" 	cx="222" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,8)" 	cx="222" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,9)" 	cx="222" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,10)" 	cx="222" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,11)" 	cx="222" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,12)" 	cx="222" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,13)" 	cx="222" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,14)" 	cx="222" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,15)" 	cx="222" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(19,16)" 	cx="222" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 20
+				<circle id= "(20,1)" 	cx="234" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,2)" 	cx="234" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,3)" 	cx="234" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,4)" 	cx="234" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,5)" 	cx="234" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,6)" 	cx="234" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,7)" 	cx="234" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,8)" 	cx="234" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,9)" 	cx="234" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,10)" 	cx="234" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,11)" 	cx="234" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,12)" 	cx="234" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,13)" 	cx="234" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,14)" 	cx="234" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,15)" 	cx="234" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(20,16)" 	cx="234" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+							
+				//column 21
+				<circle id= "(21,1)" 	cx="246" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,2)" 	cx="246" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,3)" 	cx="246" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,4)" 	cx="246" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,5)" 	cx="246" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,6)" 	cx="246" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,7)" 	cx="246" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,8)" 	cx="246" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,9)" 	cx="246" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,10)" 	cx="246" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,11)" 	cx="246" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,12)" 	cx="246" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,13)" 	cx="246" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,14)" 	cx="246" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,15)" 	cx="246" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(21,16)" 	cx="246" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+							
+				//column 22
+				<circle id= "(22,1)" 	cx="258" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,2)" 	cx="258" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,3)" 	cx="258" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,4)" 	cx="258" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,5)" 	cx="258" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,6)" 	cx="258" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,7)" 	cx="258" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,8)" 	cx="258" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,9)" 	cx="258" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,10)" 	cx="258" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,11)" 	cx="258" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,12)" 	cx="258" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,13)" 	cx="258" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,14)" 	cx="258" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,15)" 	cx="258" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(22,16)" 	cx="258" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 23
+				<circle id= "(23,1)" 	cx="270" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,2)" 	cx="270" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,3)" 	cx="270" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,4)" 	cx="270" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,5)" 	cx="270" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,6)" 	cx="270" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,7)" 	cx="270" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,8)" 	cx="270" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,9)" 	cx="270" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,10)" 	cx="270" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,11)" 	cx="270" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,12)" 	cx="270" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,13)" 	cx="270" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,14)" 	cx="270" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,15)" 	cx="270" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(23,16)" 	cx="270" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 24
+				<circle id= "(24,1)" 	cx="282" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,2)" 	cx="282" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,3)" 	cx="282" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,4)" 	cx="282" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,5)" 	cx="282" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,6)" 	cx="282" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,7)" 	cx="282" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,8)" 	cx="282" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,9)" 	cx="282" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,10)" 	cx="282" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,11)" 	cx="282" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,12)" 	cx="282" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,13)" 	cx="282" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,14)" 	cx="282" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,15)" 	cx="282" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(24,16)" 	cx="282" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				
+				//column 25
+				<circle id= "(25,1)" 	cx="294" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,2)" 	cx="294" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,3)" 	cx="294" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,4)" 	cx="294" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,5)" 	cx="294" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,6)" 	cx="294" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,7)" 	cx="294" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,8)" 	cx="294" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,9)" 	cx="294" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,10)" 	cx="294" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,11)" 	cx="294" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,12)" 	cx="294" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,13)" 	cx="294" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,14)" 	cx="294" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,15)" 	cx="294" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(25,16)" 	cx="294" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 26
+				<circle id= "(26,1)" 	cx="306" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,2)" 	cx="306" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,3)" 	cx="306" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,4)" 	cx="306" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,5)" 	cx="306" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,6)" 	cx="306" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,7)" 	cx="306" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,8)" 	cx="306" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,9)" 	cx="306" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,10)" 	cx="306" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,11)" 	cx="306" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,12)" 	cx="306" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,13)" 	cx="306" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,14)" 	cx="306" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,15)" 	cx="306" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(26,16)" 	cx="306" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 27
+				<circle id= "(27,1)" 	cx="318" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,2)" 	cx="318" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,3)" 	cx="318" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,4)" 	cx="318" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,5)" 	cx="318" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,6)" 	cx="318" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,7)" 	cx="318" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,8)" 	cx="318" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,9)" 	cx="318" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,10)" 	cx="318" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,11)" 	cx="318" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,12)" 	cx="318" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,13)" 	cx="318" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,14)" 	cx="318" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,15)" 	cx="318" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(27,16)" 	cx="318" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 28
+				<circle id= "(28,1)" 	cx="330" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,2)" 	cx="330" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,3)" 	cx="330" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,4)" 	cx="330" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,5)" 	cx="330" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,6)" 	cx="330" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,7)" 	cx="330" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,8)" 	cx="330" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,9)" 	cx="330" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,10)" 	cx="330" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,11)" 	cx="330" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,12)" 	cx="330" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,13)" 	cx="330" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,14)" 	cx="330" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,15)" 	cx="330" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(28,16)" 	cx="330" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 29
+				<circle id= "(29,1)" 	cx="342" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,2)" 	cx="342" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,3)" 	cx="342" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,4)" 	cx="342" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,5)" 	cx="342" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,6)" 	cx="342" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,7)" 	cx="342" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,8)" 	cx="342" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,9)" 	cx="342" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,10)" 	cx="342" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,11)" 	cx="342" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,12)" 	cx="342" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,13)" 	cx="342" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,14)" 	cx="342" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,15)" 	cx="342" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(29,16)" 	cx="342" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 30
+				<circle id= "(30,1)" 	cx="354" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,2)" 	cx="354" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,3)" 	cx="354" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,4)" 	cx="354" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,5)" 	cx="354" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,6)" 	cx="354" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,7)" 	cx="354" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,8)" 	cx="354" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,9)" 	cx="354" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,10)" 	cx="354" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,11)" 	cx="354" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,12)" 	cx="354" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,13)" 	cx="354" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,14)" 	cx="354" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,15)" 	cx="354" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(30,16)" 	cx="354" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 31
+				<circle id= "(31,1)" 	cx="366" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,2)" 	cx="366" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,3)" 	cx="366" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,4)" 	cx="366" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,5)" 	cx="366" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,6)" 	cx="366" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,7)" 	cx="366" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,8)" 	cx="366" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,9)" 	cx="366" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,10)" 	cx="366" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,11)" 	cx="366" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,12)" 	cx="366" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,13)" 	cx="366" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,14)" 	cx="366" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,15)" 	cx="366" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(31,16)" 	cx="366" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+				//column 32
+				<circle id= "(32,1)" 	cx="378" cy="6" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,2)" 	cx="378" cy="18" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,3)" 	cx="378" cy="30" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,4)" 	cx="378" cy="42" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,5)" 	cx="378" cy="54" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,6)" 	cx="378" cy="66" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,7)" 	cx="378" cy="78" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,8)" 	cx="378" cy="90" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,9)" 	cx="378" cy="102" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,10)" 	cx="378" cy="114" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,11)" 	cx="378" cy="126" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,12)" 	cx="378" cy="138" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,13)" 	cx="378" cy="150" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,14)" 	cx="378" cy="162" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,15)" 	cx="378" cy="174" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+				<circle id= "(32,16)" 	cx="378" cy="186" r="4" stroke="lawngreen" stroke-width="1" fill="none" />
+
+			  </svg>
+				<div id="buttonholder1" style="margin-left:7%;">
+					<button onclick="setColor('red');">Red</button>
+					<button onclick="setColor('green');">Green</button>
+					<button onclick="setColor('blue');">Blue</button>
+				</div>
+				<div id="buttonholder2" style="margin-left:7%;">
+				<button onclick="getColumn(document.getElementById('yPos').value, document.getElementById('color').value);">LightRow1</button>
+				<button onclick="selectAll('red');">Light All LEDs (Red) </button>
+				<button onclick="selectAll('transparent');">Clear Mesh</button>
+				<button onclick="setPoint(document.getElementById('xPos').value, document.getElementById('yPos').value, document.getElementById('color').value);">Set Point (2,6)</button>
+				<input type="text" id="xPos" name="xPos" value="2" style="margin-left:34%;" />
+				<input type="text" id="yPos" name="yPos" value="6" style="margin-left:34%;" />
+				</div>
+				<div id="buttonholder3" style="margin-left:7%;">
+				<button onclick="selectAll(document.getElementById('color').value);">Light All LEDs (Using Colorwheel)</button>
+				<button onclick="blink();">Blink All LEDs (Using Colorwheel)</button>
+				<button onclick="animate();">Basic Animation (Using Colorwheel)</button>
+				</div>
+				<p>
+				&nbsp
+				</p>
+				<form><input type="text" id="color" name="color" value="#123456" style="margin-left:34%;" /></form>
+				<div id="colorpicker" style="margin-left:28%;"></div>
+				
+		
+            </div>
+            <div id="sidebar">
+                <h3>CSC480 page</h3>
+                <h4>Assignments </h4>
+            </div>
+            <div id="footer">
+                <p>Footer</p>
+            </div>
+        </div>
+    </body>
+</html> 

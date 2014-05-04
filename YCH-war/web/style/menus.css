@@ -1,0 +1,480 @@
+
+/* Default Elements */
+body 
+{
+background: rgba(184,0,0,1);
+background: -moz-linear-gradient(top, rgba(184,0,0,1) 0%, rgba(255,38,38,1) 49%, rgba(56,0,0,1) 98%, rgba(91,182,215,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(184,0,0,1)), color-stop(49%, rgba(255,38,38,1)), color-stop(98%, rgba(56,0,0,1)), color-stop(100%, rgba(91,182,215,1)));
+background: -webkit-linear-gradient(top, rgba(184,0,0,1) 0%, rgba(255,38,38,1) 49%, rgba(56,0,0,1) 98%, rgba(91,182,215,1) 100%);
+background: -o-linear-gradient(top, rgba(184,0,0,1) 0%, rgba(255,38,38,1) 49%, rgba(56,0,0,1) 98%, rgba(91,182,215,1) 100%);
+background: -ms-linear-gradient(top, rgba(184,0,0,1) 0%, rgba(255,38,38,1) 49%, rgba(56,0,0,1) 98%, rgba(91,182,215,1) 100%);
+background: linear-gradient(to bottom, rgba(184,0,0,1) 0%, rgba(255,38,38,1) 49%, rgba(56,0,0,1) 98%, rgba(91,182,215,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b80000', endColorstr='#5bb6d7', GradientType=0 );
+}	
+
+p 
+{
+    margin-left: 2em;
+    margin-right:2em;
+    margin-top:1em;
+    margin-bottom:1em;
+    color:#ffffff;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right:5px;
+}
+
+a:hover{
+    color: #ffffff;
+    background:#191919;
+    padding-left: 10px;
+    padding-right:5px;
+    font-weight: bold;
+    border:1px solid white;
+}
+
+h1 {
+    margin:0;
+    color:#ffffff;
+    padding:-10px;
+    font:Verdana;
+    text-decoration: none;
+    font-weight: normal;
+}
+h2 {
+    margin:0 0 1em;
+    color:#ffffff;
+    padding:-10px;
+    padding-left:15px;
+    font:Verdana;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+h3
+{
+    margin:0 0 1em;
+    color:#ffffff;
+    padding:-10px;
+    padding-left:15px;
+    font:Verdana;
+    text-decoration: none;
+    font-weight: normal;
+}
+h4
+{
+    margin:0 0 1em;
+    color:#ffffff;
+    padding:-10px;
+    padding-left:15px;
+    font:Verdana;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+li{
+    color:#ffffff;
+}
+
+
+strong
+{
+    color:#ffffff;
+    font-weight: bold;
+}
+.backdrop 
+{
+    background-color: #920000;
+    margin-left: 2em;
+    margin-right:2em;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+.center 
+{
+    text-align:center;
+}
+
+.menu 
+{
+    width:60%; 
+    margin-left:auto;
+    margin-right:auto;
+    font-family:sans-serif;
+    text-align:center;
+}
+
+.menubar 
+{
+    width: 1%;
+}
+
+.menuactive 
+{
+    width:10%;
+    font-weight:bold;
+    font-style:italic;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.menuinactive 
+{
+    width:10%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+table/* ,td */
+{
+    border-width:2px;
+    /* border-collapse:collapse; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12pt;
+    padding: 5px;	
+}
+
+table#races
+{
+    border-width:2px;
+    /* border-collapse:collapse; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12pt;
+    padding: 10px;
+    display:inline	
+}
+
+img#image1{
+    padding: 30px;
+    border: 5px; 
+    border-radius: 10px;
+    color: #00000;
+}
+
+img#huaraches{
+    padding: 20px;
+}
+iframe#sandals{
+    float:left;
+}
+div#quote1{
+    color: forestgreen;
+    font-family: Arial, Verdana, sans-serif;
+    background: #14100c;;
+    padding: 20px;
+    border-radius:10px;
+    border:5px solid #000000;
+}
+
+th{
+    background-color: #485e49;
+    color: white;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+    font-style: italic;
+    font-weight: bold;
+}
+
+ul#list-nav li {
+    display:inline;
+}
+
+ul#list-nav li a {
+    text-decoration:none;
+    text-align:center;
+    padding:8px 0;
+    width:100px;
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#a4b357',GradientType=0 ); /* IE6-9 */
+    color:#eee;
+    float:left;
+}
+
+ul#list-nav li a:hover {
+    background-color:#191919;
+    color:#000;
+    opacity:0.7; 
+}
+
+div#content-2{
+    float:right;
+    width:720px;
+}
+
+div#content-main {
+    float:left;
+    width:840px;
+    padding:10px;
+    background:#ddf;
+}
+
+div#content-right{
+    float:right;
+    width:220px;
+    padding:10px;
+    background:#dff;
+}
+
+div#wrap {
+    background-color: rgba(0, 0, 0, 0.3);
+    width:750px;
+    margin:0 auto;
+}
+/* Element Gradient*/
+div#nav {
+top: 0;
+background-color: black;
+width: 100%;
+color: #ffffff;
+height: 35px;
+text-align: left;
+padding-top: 15px;
+/* Adds shadow to the bottom of the bar */
+-webkit-box-shadow: 0px 0px 8px 0px #000000;
+-moz-box-shadow: 0px 0px 8px 0px #000000;
+box-shadow: 0px 0px 8px 0px #000000;
+/* Adds the transparent background */
+background-color: rgba(1, 1, 1, 0.8);
+color: rgba(1, 1, 1, 0.8);
+}
+div#nav a {
+font-size: 14px;
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 10px;
+padding-bottom: 15px;
+color: white;
+text-decoration: none;
+}
+div#nav a:hover {
+color: grey;
+}
+
+#nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#nav li {
+    display:inline;
+    margin:0;
+    padding:0;
+}
+#sidebarleft {
+    float:left;
+    width:230px;
+    background-color:#141414;
+    min-height:600px;
+    background-image: url(/~lhinman/Style/headerbar.jpg);
+    background-repeat: repeat-x;
+    color: #fff;
+    font-style: normal;
+    padding:10px;
+    border:1px solid grey;
+
+    outline: 1px solid grey;
+    outline-style: inherit;
+    
+    margin-left: 0px;
+    margin-bottom: 40px;
+    margin-top:15px;
+}
+#header {
+    clear:both;
+    background-color:#141414;
+    min-height:100px;
+    background-image: url(/~lhinman/Style/headerbar.jpg);
+    background-repeat: repeat-x;
+    color: #fff;
+    font-style: normal;
+    padding:5px;
+    border:1px solid grey;
+	
+    outline: 1px solid grey;
+    outline-style: inherit;
+    
+    margin-bottom:10px;
+}
+#main {
+    float:left;
+    width:450px;
+    background-color: #141414;
+    min-height:600px;
+    background-image: url(/~lhinman/Style/headerbar.jpg);
+    background-position:center top;
+    background-repeat: repeat-x;
+    color: #fff;
+    font-style: normal;
+    padding:0px;
+    border:1px solid grey;
+    
+    outline: 1px solid grey;
+    outline-style: inherit;
+    
+    margin-top:10px;
+    margin-left:0px;
+    margin-right:5px;
+}
+
+#sidebar {
+    float:left;
+    width:230px;
+    background-color:#141414;
+    min-height:600px;
+    background-image: url(/~lhinman/Style/headerbar.jpg);
+    background-repeat: repeat-x;
+    color: #fff;
+    font-style: normal;
+    padding:0px;
+    border:1px solid grey;
+
+    outline: 1px solid grey;
+    outline-style: inherit;
+    
+    margin-left: 55px;
+    margin-bottom: 40px;
+    margin-top:10px;
+}
+#footer {
+    clear:both;
+    background-color:#141414;
+    min-height:100px;
+    background-image: url(/~lhinman/Style/headerbar.jpg);
+    background-repeat: repeat-x;
+    color: #fff;
+    font-style: normal;
+    padding:5px;
+    border:1px solid grey;
+    
+    outline: 1px solid grey;
+    outline-style: inherit;
+    
+    margin: 0px;
+}
+#footer p {
+    margin:0;
+}
+
+/*Assignment 3 styling only*/
+#assignmentmain {
+    float:left;
+    width:750px;
+    background-color: #141414;
+    min-height:600px;
+    background-image: url(/~lhinman/Style/headerbar.jpg);
+    background-position:center top;
+    background-repeat: repeat-x;
+    color: #fff;
+    font-style: normal;
+    padding:0px;
+    border:1px solid grey;
+    
+    outline: 1px solid grey;
+    outline-style: inherit;
+    
+    margin-top:10px;
+    margin-left:0px;
+    margin-right:5px;
+}
+div#controls{
+    height: 50px;
+    margin-left: 25%;
+    margin-right: -30%;
+}
+canvas#buncopy {
+    float:left;
+    width:230px;
+    padding:10px;
+    background:#75886c;
+    min-height:600px;
+}
+/*CANVAS Video styling*/
+#canvasholder{
+    z-index:1;
+    position:relative;
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    width:400px;
+    top:60px;
+}
+
+#output {
+    width:750px; 
+    height:500px; 
+    border-style:solid;
+    border-width:5px;
+    border-color:#666666;
+}
+#ahbun{
+    float:left;
+}
+/*END Assignment 3 styling only*/
+
+/*XML styling*/	
+adirondack46hp
+{
+    background-color: #ffffff;
+    width: 100%;
+}
+docheader
+{
+    color: #000000;
+    font-size: 20pt;
+}
+mountain
+{
+    display: block;
+    margin-bottom: 30pt;
+    margin-left: 0;
+}
+name
+{
+    color: #333333;
+    font-size: 20pt;
+}
+elevation,rank,lengthoftrip,stdhiketime
+{
+    display: block;
+    color: #000000;
+    margin-left: 20pt;
+}
+
+/*Bounce styling*/	
+#superball {
+    position:absolute;
+    left:0;
+    top:0;
+    visibility:hide;
+    visibility:hidden;
+    width:40;
+    height:40;
+}
+
+#hounds
+{
+    margin-top:30px;
+}
+#googlewhack
+{
+	margin-left:45px;
+	height: 200px;
+	width:350px;
+}

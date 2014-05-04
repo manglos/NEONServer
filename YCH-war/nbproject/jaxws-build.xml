@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-Leaderboard" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Leaderboard"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Leaderboard" destdir="${build.generated.dir}/jax-wsCache/Leaderboard" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Leaderboard/wsdl/moxie.oswego.edu_40770/Leaderboard/Leaderboard.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://moxie.oswego.edu:40770/Leaderboard/Leaderboard?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Leaderboard/wsdl/moxie.oswego.edu_40770/Leaderboard/Leaderboard.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Leaderboard"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Leaderboard">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Leaderboard" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Leaderboard"/>
+    </target>
+    <target name="wsimport-client-Database" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Database"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Database" destdir="${build.generated.dir}/jax-wsCache/Database" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Database/wsdl/moxie.oswego.edu_40770/DatabaseService/Database.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://moxie.oswego.edu:40770/DatabaseService/Database?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Database/wsdl/moxie.oswego.edu_40770/DatabaseService/Database.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Database"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Database">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Database" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Database"/>
+    </target>
+    <target name="wsimport-client-CurrentlyPlaying" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CurrentlyPlaying"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CurrentlyPlaying" destdir="${build.generated.dir}/jax-wsCache/CurrentlyPlaying" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CurrentlyPlaying/wsdl/moxie.oswego.edu_40770/CurrentlyPlaying/CurrentlyPlaying.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://moxie.oswego.edu:40770/CurrentlyPlaying/CurrentlyPlaying?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CurrentlyPlaying/wsdl/moxie.oswego.edu_40770/CurrentlyPlaying/CurrentlyPlaying.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CurrentlyPlaying"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CurrentlyPlaying">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CurrentlyPlaying" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CurrentlyPlaying"/>
+    </target>
+    <target name="wsimport-client-GetPlayerInfo" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/GetPlayerInfo"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GetPlayerInfo" destdir="${build.generated.dir}/jax-wsCache/GetPlayerInfo" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GetPlayerInfo/wsdl/moxie.oswego.edu_40770/GetPlayerInfoService/GetPlayerInfo.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://moxie.oswego.edu:40770/GetPlayerInfoService/GetPlayerInfo?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GetPlayerInfo/wsdl/moxie.oswego.edu_40770/GetPlayerInfoService/GetPlayerInfo.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/GetPlayerInfo"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/GetPlayerInfo">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-GetPlayerInfo" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/GetPlayerInfo"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Leaderboard, wsimport-client-Database, wsimport-client-CurrentlyPlaying, wsimport-client-GetPlayerInfo"/>
+</project>

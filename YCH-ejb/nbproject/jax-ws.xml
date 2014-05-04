@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="CurrentlyPlaying">
+      <implementation-class>WS.CurrentlyPlaying</implementation-class>
+    </service>
+    <service name="GetPlayerInfo">
+      <implementation-class>WS.GetPlayerInfo</implementation-class>
+    </service>
+    <service name="Leaderboard">
+      <implementation-class>WS.Leaderboard</implementation-class>
+    </service>
+    <service name="Database">
+      <implementation-class>WS.Database</implementation-class>
+    </service>
+    <service name="PersistenceTest">
+      <implementation-class>WS.PersistenceTest</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://WS/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WS/">
+
+<xs:element name="addPlayerToCurrent" type="tns:addPlayerToCurrent"/>
+
+<xs:element name="addPlayerToCurrentResponse" type="tns:addPlayerToCurrentResponse"/>
+
+<xs:element name="getCurrentlyList" type="tns:getCurrentlyList"/>
+
+<xs:element name="getCurrentlyListResponse" type="tns:getCurrentlyListResponse"/>
+
+<xs:element name="print" type="tns:print"/>
+
+<xs:element name="printResponse" type="tns:printResponse"/>
+
+<xs:element name="sortBy" type="tns:sortBy"/>
+
+<xs:element name="sortByResponse" type="tns:sortByResponse"/>
+
+<xs:complexType name="addPlayerToCurrent">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPlayerToCurrentResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="sortBy">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sortByResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="print">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="printResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrentlyList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCurrentlyListResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

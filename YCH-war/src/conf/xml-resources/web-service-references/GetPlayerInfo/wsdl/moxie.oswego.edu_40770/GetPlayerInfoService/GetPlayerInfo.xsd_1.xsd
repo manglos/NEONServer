@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://WS/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WS/">
+
+<xs:element name="addLogin" type="tns:addLogin"/>
+
+<xs:element name="addLoginResponse" type="tns:addLoginResponse"/>
+
+<xs:element name="getColor" type="tns:getColor"/>
+
+<xs:element name="getColorResponse" type="tns:getColorResponse"/>
+
+<xs:element name="getFirstName" type="tns:getFirstName"/>
+
+<xs:element name="getFirstNameResponse" type="tns:getFirstNameResponse"/>
+
+<xs:element name="getLastName" type="tns:getLastName"/>
+
+<xs:element name="getLastNameResponse" type="tns:getLastNameResponse"/>
+
+<xs:element name="getLoginCount" type="tns:getLoginCount"/>
+
+<xs:element name="getLoginCountResponse" type="tns:getLoginCountResponse"/>
+
+<xs:element name="getPassword" type="tns:getPassword"/>
+
+<xs:element name="getPasswordResponse" type="tns:getPasswordResponse"/>
+
+<xs:element name="setOffline" type="tns:setOffline"/>
+
+<xs:element name="setOfflineResponse" type="tns:setOfflineResponse"/>
+
+<xs:element name="setOnline" type="tns:setOnline"/>
+
+<xs:element name="setOnlineResponse" type="tns:setOnlineResponse"/>
+
+<xs:complexType name="setOnline">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setOnlineResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getColor">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getColorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addLogin">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addLoginResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getLastName">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLastNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFirstName">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFirstNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setOffline">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setOfflineResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getPassword">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoginCount">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoginCountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
